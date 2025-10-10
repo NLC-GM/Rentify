@@ -1,4 +1,4 @@
-/* ESTILOS GENERALES */
+* ESTILOS GENERALES */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -18,8 +18,10 @@ main {
   background-blend-mode: overlay;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  height: 100px;
+  padding: 0 20px;
 }
 
 .logo-container {
@@ -31,7 +33,7 @@ main {
 }
 
 .logo {
-  height: 150px;
+  height: 80px;
   width: auto;
   max-width: 150px;
   transition: transform 0.3s ease;
@@ -42,7 +44,7 @@ main {
 }
 
 .login-btn {
-  position: absolute;
+  position: static;
   right: 20px;
   top: 20px;
   background: #005A9C;
@@ -68,6 +70,8 @@ nav {
   gap: 2rem;
   margin: 0;
   padding: 0;
+  background-color: rgb(3, 0, 0);
+  border-radius: 40px;
 }
 
 .navbar li {
@@ -75,7 +79,7 @@ nav {
 }
 
 .navbar a {
-  color: rgb(150, 153, 160);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -87,7 +91,7 @@ nav {
 }
 
 .navbar a:hover {
-  background-color: #ffffff;
+  background-color: #b9b3b3;
   box-shadow: 0 0 10px #121813;
 }
 
@@ -132,19 +136,86 @@ nav {
 
 .Eslogan {
   font-size: 30px;
-  color: #333;
   margin-top: 0.5rem;
   text-align: center;
   font-family: 'Georgia', 'Times New Roman', serif;
   font-style: italic;
   font-weight: normal;
-  color: #555;
+  color: #ffffff;
 }
 /* Desplazamiento suave en toda la página */
 html {
   scroll-behavior:smooth ;
 }
+/* CONTENEDOR DEL BUSCADOR */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 0 20px;
+}
 
+/* ESTILOS DEL INPUT DE BÚSQUEDA */
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 25px 0 0 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #5d04b6;
+}
+
+/* ESTILOS DEL BOTÓN DE BÚSQUEDA */
+.search-button {
+  background: linear-gradient(to right, #5d04b6, #310bd9);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  background: linear-gradient(to right, #4a0390, #2509a8);
+  transform: scale(1.05);
+}
+/* VERSIÓN COMPACTA PARA HEADER */
+.search-container.compact {
+  margin: 0;
+  max-width: 300px;
+}
+
+.search-container.compact .search-input {
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+.search-container.compact .search-button {
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+/* VERSIÓN MÓVIL */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .search-input,
+  .search-button {
+    border-radius: 25px;
+    width: 100%;
+  }
+}
 
 
 /* Carrusel Hero Principal */
@@ -161,6 +232,7 @@ html {
   border-radius: 20px;
   margin: 0 auto 2rem auto; /* Centra el contenedor */
   margin-bottom: 70px;
+  margin-top: 25px;
 
 }
 
@@ -419,6 +491,7 @@ footer {
   
   main {
     padding: 0.5rem;
+    margin-bottom: 80px;
   }
   
   section {
