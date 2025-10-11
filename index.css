@@ -7,7 +7,8 @@ body {
 }
 
 main {
-  padding: 2rem;
+  margin:0;
+  padding: 0;
 }
 
 /* HEADER Y LOGO */
@@ -24,6 +25,9 @@ main {
   padding: 0 20px;
   top: 0;
   width:100%;
+  margin: 0;
+  left: 0;
+  right: 0;
 }
 
 .logo-container {
@@ -550,4 +554,5 @@ footer {
     font-size: 1em;
   }
 }
+
 
