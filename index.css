@@ -141,7 +141,7 @@ nav {
 
 .Eslogan {
   font-size: 30px;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0 0; /* ← quita el margen inferior */
   text-align: center;
   font-family: 'Georgia', 'Times New Roman', serif;
   font-style: italic;
@@ -553,6 +553,7 @@ footer {
     font-size: 1em;
   }
 }
+
 
 
 
