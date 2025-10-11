@@ -24,7 +24,7 @@ main {
   height: 100px;
   padding: 0 20px;
   top: 0;
-  width:100%;
+  width:auto;
   margin: 0;
   left: 0;
   right: 0;
@@ -554,5 +554,6 @@ footer {
     font-size: 1em;
   }
 }
+
 
 
