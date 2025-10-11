@@ -22,6 +22,8 @@ main {
   align-items: center;
   height: 100px;
   padding: 0 20px;
+  top: 0;
+  width:100%;
 }
 
 .logo-container {
@@ -548,3 +550,4 @@ footer {
     font-size: 1em;
   }
 }
+
