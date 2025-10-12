@@ -7,7 +7,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-PGEP7JFH3E');
   </script>
   <meta charset="UTF-8" />
@@ -18,7 +17,6 @@
     .seccion {
       color: #000 !important;
     }
-    
   </style>
 </head>
 <body>
@@ -27,28 +25,26 @@
     <div class="logo-container">
       <img src="logo.png" alt="Rentify Logo" class="logo">
     </div>
-     <h1 class="Eslogan">Vive la Experiencia, Sin las Complicaciones </span></h1>
-    <button class="login-btn">Iniciar Sesión</button>
+    <h1 class="Eslogan">Vive la Experiencia, Sin las Complicaciones</h1>
+    <button class="login-btn" onclick="window.location.href='login.html'">Iniciar Sesión</button>
   </header> 
   
-    
   <main>
-   
     <div class="contenedor">
       <ul class="navbar">
-        <li><a href="#inicio" onclick="mostrarSeccion('inicio'); return false;"><span >Lo mas alquilado</span></a></li>
+        <li><a href="#inicio" onclick="mostrarSeccion('inicio'); return false;"><span>Lo mas alquilado</span></a></li>
         <li><a href="#acerca" onclick="mostrarSeccion('acerca'); return false;">Informacion</a></li>
-        <li><a href="#contacto" onclick="mostrarSeccion('contacto'); return false;">Contacto</a></li>
-        <li><a href="#todo" onclick="mostrarSeccion('todo'); return false;">Todas nuestras Ofertas</a></li>
+        <li><a href="#contacto" onclick="mostrarSeccion('subasta'); return false;">Subasta</a></li>
+        <li><a href="#todo" onclick="mostrarSeccion('limitado'); return false;">Ofertas de tiempo limitado</a></li>
       </ul>
     </div>
+
     <!-- Buscador en el contenido principal -->
     <div class="search-container">
       <input type="text" class="search-input" placeholder="Buscar...">
       <button class="search-button">Buscar</button>
     </div>
 
-    
     <!-- Carrusel Automático Principal -->
     <div class="carrusel-hero">
       <div class="slide active">
@@ -72,99 +68,113 @@
           <p>Equipos en perfecto estado para tu tranquilidad</p>
         </div>
       </div>
+      <div class="slide">
+        <img src="4.jpg" alt="Experiencia 4">
+        <div class="slide-texto">
+          <h2 style="font-family: 'Arial Black', 'Arial Bold', sans-serif;">Sin Complicaciones</h2>
+          <p>Deja todo en manos de los expertos, Disfruta el momento</p>
+        </div>
+      </div>
     </div>
+
     <section id="inicio" class="seccion" style="display:none;">
-    <h2 style="text-align: center;">🔥 Lo mas alquilado 🔥</h2>
-    
-    <!-- Grid de productos destacados -->
-    <div class="grid-productos">
+      <h2 style="text-align: center;">🔥 Lo mas alquilado 🔥</h2>
       
-      <!-- Producto 1 -->
-      <div class="producto-card">
-        <div class="producto-carrusel">
-          <img src="1.jpg" alt="Kit Camping" class="producto-img active">
-          <img src="productos/camping/camp1.jpg" alt="Kit Camping" class="producto-img">
-          <img src="productos/camping/camp3.jpg" alt="Kit Camping" class="producto-img" style="object-position: bottom;">
-          <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
-          <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+      <!-- Grid de productos destacados -->
+      <div class="grid-productos">
+        
+        <!-- Producto 1 -->
+        <div class="producto-card">
+          <div class="producto-carrusel">
+            <img src="1.jpg" alt="Kit Camping" class="producto-img active">
+            <img src="productos/camping/camp1.jpg" alt="Kit Camping" class="producto-img">
+            <img src="productos/camping/camp3.jpg" alt="Kit Camping" class="producto-img" style="object-position: bottom;">
+            <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
+            <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+          </div>
+          <h3>Kit de Camping Premium</h3>
+          <p>Incluye tienda, sacos de dormir, linterna y más</p>
+          <span class="precio">$50/día</span>
+          <button class="reservar-btn">¡Reservar!</button>
         </div>
-        <h3>Kit de Camping Premium</h3>
-        <p>Incluye tienda, sacos de dormir, linterna y más</p>
-        <span class="precio">$50/día</span>
-      </div>
-      
-      <!-- Producto 2 -->
-      <div class="producto-card">
-        <div class="producto-carrusel">
-          <img src="2.png" alt="Kit Playa" class="producto-img active">
-          <img src="productos/playa/playa3.jpg" alt="Kit Playa" class="producto-img" style="object-position: center;">
-          <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
-          <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+        
+        <!-- Producto 2 -->
+        <div class="producto-card">
+          <div class="producto-carrusel">
+            <img src="2.png" alt="Kit Playa" class="producto-img active">
+            <img src="productos/playa/playa3.jpg" alt="Kit Playa" class="producto-img" style="object-position: center;">
+            <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
+            <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+          </div>
+          <h3>Kit de Playa Completo</h3>
+          <p>Sombrilla, toallas, sillas y Juegos</p>
+          <span class="precio">$30/día</span>
+          <button class="reservar-btn">¡Reservar!</button>
         </div>
-        <h3>Kit de Playa Completo</h3>
-        <p>Sombrilla, toallas, sillas y Juegos</p>
-        <span class="precio">$30/día</span>
-      </div>
-      
-      <!-- Producto 3 -->
-      <div class="producto-card">
-        <div class="producto-carrusel">
-          <img src="3.jpg" alt="Kit Escalada" class="producto-img active">
-          <img src="productos/escalada/Esc2.jpg" alt="Kit Escalada" class="producto-img">
-          <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
-          <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+        
+        <!-- Producto 3 -->
+        <div class="producto-card">
+          <div class="producto-carrusel">
+            <img src="3.jpg" alt="Kit Escalada" class="producto-img active">
+            <img src="productos/escalada/Esc2.jpg" alt="Kit Escalada" class="producto-img">
+            <img src="productos/escalada/esc3.jpg" alt="Kit Escalada" class="producto-img">
+            <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
+            <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+          </div>
+          <h3>Kit de Escalada</h3>
+          <p>Arneses, equipo de seguridad y guía incluido</p>
+          <span class="precio">$80/día</span>
+          <button class="reservar-btn">¡Reservar!</button>
         </div>
-        <h3>Kit de Escalada</h3>
-        <p>Arneses, equipo de seguridad y guía incluido</p>
-        <span class="precio">$80/día</span>
-      </div>
-      
-      <!-- Producto 4 -->
-      <div class="producto-card">
-        <div class="producto-carrusel">
-          <img src="productos/picnic/pic1.jpg" alt="Kit Picnic" class="producto-img active">
-          <img src="productos/picnic/pic2.jpg" alt="Kit Picnic" class="producto-img">
-          <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
-          <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+        
+        <!-- Producto 4 -->
+        <div class="producto-card">
+          <div class="producto-carrusel">
+            <img src="productos/picnic/pic1.jpg" alt="Kit Picnic" class="producto-img active">
+            <img src="productos/picnic/pic2.jpg" alt="Kit Picnic" class="producto-img">
+            <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
+            <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+          </div>
+          <h3>Kit de Picnic Gourmet</h3>
+          <p>Mesa plegable, mantel, vajilla y cooler, variedad de comidas y Ubicaion excepcional</p>
+          <span class="precio">$25/día</span>
+          <button class="reservar-btn">¡Reservar!</button>
         </div>
-        <h3>Kit de Picnic Gourmet</h3>
-        <p>Mesa plegable, mantel, vajilla y cooler</p>
-        <p>Sumado a la gran variedad de comidas y Ubicaion excepcional</p>
-        <span class="precio">$25/día</span>
-      </div>
-      
-      <!-- Producto 5 -->
-      <div class="producto-card">
-        <div class="producto-carrusel">
-          <img src="productos/acuatico/kayac1.jpg" alt="Kit Deportes" class="producto-img active">
-          <img src="productos/acuatico/playa2.jpg" alt="Kit Deportes" class="producto-img" style="object-position: top;">
-          <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
-          <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+        
+        <!-- Producto 5 -->
+        <div class="producto-card">
+          <div class="producto-carrusel">
+            <img src="productos/acuatico/kayac1.jpg" alt="Kit Deportes" class="producto-img active">
+            <img src="productos/acuatico/playa2.jpg" alt="Kit Deportes" class="producto-img" style="object-position: top;">
+            <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
+            <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+          </div>
+          <h3>Kit de Deportes Acuáticos</h3>
+          <p>Kayak, chalecos salvavidas y equipo completo</p>
+          <span class="precio">$60/día</span>
+          <button class="reservar-btn">¡Reservar!</button>
         </div>
-        <h3>Kit de Deportes Acuáticos</h3>
-        <p>Kayak, chalecos salvavidas y equipo completo</p>
-        <span class="precio">$60/día</span>
-      </div>
-      
-      <!-- Producto 6 -->
-      <div class="producto-card">
-        <div class="producto-carrusel">
-          <img src="productos/nieve/nieve2.jpg" alt="Kit Nieve" class="producto-img active">
-          <img src="productos/nieve/nieve1.jpg" alt="Kit Nieve" class="producto-img" style="object-position: top;">
-          <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
-          <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+        
+        <!-- Producto 6 -->
+        <div class="producto-card">
+          <div class="producto-carrusel">
+            <img src="productos/nieve/nieve2.jpg" alt="Kit Nieve" class="producto-img active">
+            <img src="productos/nieve/nieve1.jpg" alt="Kit Nieve" class="producto-img" style="object-position: top;">
+            <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
+            <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+          </div>
+          <h3>Kit de Nieve</h3>
+          <p>Equipo de nieve, Ropa impermeable e Instructor</p>
+          <span class="precio">$70/día</span>
+          <button class="reservar-btn">¡Reservar!</button>
         </div>
-        <h3>Kit de Nieve</h3>
-        <p>Equipo de nieve, Ropa impermeable e Instructor</p>
-        <span class="precio">$70/día</span>
       </div>
-      
-    </div>
-  </section>
+    </section>
 
     <section id="acerca" class="seccion" style="display:none;">
       <h2>Acerca de nosotros</h2>
-      <p class="presentacion">Somos tu puerta de entrada a la aventura, la diversión y la desconexión.
+      <p class="presentacion">
+        Somos tu puerta de entrada a la aventura, la diversión y la desconexión.
         En Rentify, no solo alquilamos material; diseñamos y organizamos experiencias completas 
         para que tú y los tuyos podáis vivir momentos únicos sin tener que preocuparos por nada.
         Nos apasiona sacar el máximo partido al aire libre y a la creatividad. 
@@ -175,9 +185,9 @@
       <h2>Nuestra Misión</h2>
       <p class="presentacion">
         Nuestra misión es democratizar el acceso a experiencias únicas y de calidad,
-         eliminando todas las barreras logísticas para nuestros clientes. 
-         Nosotros nos encargamos de currar cada detalle —desde el equipo premium hasta la planificación— 
-         para que las personas solo tengan que preocuparse de lo esencial: conectar, disfrutar y crear recuerdos inolvidables..
+        eliminando todas las barreras logísticas para nuestros clientes. 
+        Nosotros nos encargamos de currar cada detalle —desde el equipo premium hasta la planificación— 
+        para que las personas solo tengan que preocuparse de lo esencial: conectar, disfrutar y crear recuerdos inolvidables.
       </p>
       <h2>Vision</h2>
       <p class="presentacion">
@@ -189,11 +199,146 @@
       </p>
     </section>
 
-    <section id="contacto" class="seccion" style="display:none;">
-      <h2>Contacto</h2>
-      <h1 style="font-style: oblique;text-align: center">404 ERROR</h1>
+    <section id="subasta" class="seccion" style="display:none;">
+      <h2 style="text-align: center;">⚡ Experiencias en Subasta ⚡</h2>
+      
+      <div class="subasta-info">
+        <h3>¡Puja por aventuras exclusivas!</h3>
+        <p>Ofertas especiales que no encontrarás en ningún otro lugar</p>
+      </div>
+
+      <div class="proximamente-card">
+        <div class="contador-subasta">
+          <h4>Próxima subasta inicia en:</h4>
+          <div class="tiempo-subasta">
+            <span id="subasta-dias">07</span> días :
+            <span id="subasta-horas">12</span> horas :
+            <span id="subasta-minutos">45</span> min
+          </div>
+        </div>
+        
+        <!-- NUEVA EXPERIENCIA EXCLUSIVA -->
+        <div class="experiencia-destacada">
+          <div class="producto-carrusel">
+            <img src="productos/vuelo/1.jpg" alt="Vuelo en Globo" class="producto-img active">
+            <img src="productos/vuelo/2.jpg" alt="Vuelo en Globo" class="producto-img">
+            <img src="productos/vuelo/3.jpg" alt="Vuelo en Globo" class="producto-img">
+            <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
+            <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+          </div>
+          
+          <h4>🎈 Vuelo en Globo Aerostático</h4>
+          <p><strong>Experiencia premium para 2 personas</strong></p>
+          <ul>
+            <li>✅ Vuelo al amanecer de 1 hora</li>
+            <li>✅ Brindis con champagne premium</li>
+            <li>✅ Certificado de vuelo firmado</li>
+            <li>✅ Fotos y videos profesionales incluidos</li>
+            <li>✅ Desayuno gourmet post-vuelo</li>
+            <li>✅ Hasta 4 personas</li>
+          </ul>
+          <div class="info-subasta">
+            <p class="precio-base">Valor normal: <del>$450</del></p>
+            <p class="puja-inicial">💰 Puja inicial: <strong>$250</strong></p>
+            <p class="ubicacion">📍 Ubicación: Valle de los Volcanes</p>
+          </div>
+        </div>
+        
+        <button class="notificarme-btn">🔔 Notificarme cuando empiece</button>
+        
+        <div class="beneficios-subasta">
+          <h5>¿Por qué pujar en nuestras subastas?</h5>
+          <div class="beneficios">
+            <span>🎯 Experiencias únicas</span>
+            <span>💸 Hasta 60% de descuento</span>
+            <span>⚡ Ofertas limitadas</span>
+            <span>🏆 Productos premium</span>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <section id="limitado" class="seccion" style="display:none;">
+      <h2 style="text-align: center;">⏰ Ofertas de Tiempo Limitado ⏰</h2>
+      
+      <!-- Contador Regresivo -->
+      <div class="contador-regresivo">
+        <h3>¡Oferta termina en!</h3>
+        <div class="tiempo">
+          <div class="unidad">
+            <span id="dias">00</span>
+            <small>Días</small>
+          </div>
+          <div class="unidad">
+            <span id="horas">00</span>
+            <small>Horas</small>
+          </div>
+          <div class="unidad">
+            <span id="minutos">00</span>
+            <small>Minutos</small>
+          </div>
+          <div class="unidad">
+            <span id="segundos">00</span>
+            <small>Segundos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto en Oferta -->
+      <div class="oferta-especial">
+        <div class="producto-card oferta">
+          <div class="producto-carrusel">
+            <img src="productos/escalada/Esc2.jpg" alt="Kit Escalada Premium" class="producto-img active">
+            <img src="3.jpg" alt="Kit Escalada Premium" class="producto-img">
+            <img src="productos/escalada/esc3.jpg" alt="Kit Escalada" class="producto-img">
+            <button class="carrusel-prev" onclick="cambiarProductoFoto(this, -1)">‹</button>
+            <button class="carrusel-next" onclick="cambiarProductoFoto(this, 1)">›</button>
+          </div>
+          <div class="etiqueta-oferta">🔥 40% OFF 🔥</div>
+          <h3>Kit de Escalada Premium</h3>
+          <p>Equipo profesional + Guía certificado + Fotos incluidas</p>
+          <div class="precios">
+            <span class="precio-antiguo">$100/día</span>
+            <span class="precio-nuevo">$60/día</span>
+          </div>
+          <button class="reservar-btn">¡Reservar Oferta!</button>
+        </div>
+      </div>
+    </section>
+
     <script>
+      // Contador regresivo (72 horas desde ahora)
+      function iniciarContador() {
+        const fechaFin = new Date();
+        fechaFin.setHours(fechaFin.getHours() + 72); // 3 días desde ahora
+
+        function actualizarContador() {
+          const ahora = new Date();
+          const diferencia = fechaFin - ahora;
+
+          if (diferencia <= 0) {
+            document.querySelector('.contador-regresivo').innerHTML = '<h3>¡Oferta Expirada!</h3>';
+            return;
+          }
+
+          const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+          const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+          const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+          document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
+          document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
+          document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
+          document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
+        }
+
+        actualizarContador();
+        setInterval(actualizarContador, 1000);
+      }
+
+      // Iniciar contador cuando la página cargue
+      document.addEventListener('DOMContentLoaded', iniciarContador);
+
       document.querySelector('.search-button').addEventListener('click', function() {
         const searchTerm = document.querySelector('.search-input').value;
         if (searchTerm.trim() !== '') {
@@ -209,6 +354,7 @@
           document.querySelector('.search-button').click();
         }
       });
+
       // Carrusel Automático Hero
       let currentSlide = 0;
       const slides = document.querySelectorAll('.carrusel-hero .slide');
@@ -222,9 +368,9 @@
       // Cambiar slide cada 5 segundos
       setInterval(nextSlide, 5000);
 
-    
       // Inicializar indicadores al cargar
       document.addEventListener('DOMContentLoaded', actualizarIndicadores);
+
       function mostrarSeccion(id) {
         var secciones = document.querySelectorAll('.seccion');
         var seleccionada = document.getElementById(id);
@@ -235,10 +381,10 @@
             sec.style.display = 'none';
           });
           seleccionada.style.display = 'block';
-           setTimeout(function() {
-          seleccionada.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
+          setTimeout(function() {
+            seleccionada.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
             });
           }, 100);
         }
@@ -266,16 +412,35 @@
         
         imagenes[newIndex].classList.add('active');
       }
+      // Contador para la próxima subasta (7 días desde ahora)
+      function iniciarContadorSubasta() {
+        const fechaSubasta = new Date();
+        fechaSubasta.setDate(fechaSubasta.getDate() + 7); // 7 días desde ahora
+
+        function actualizarContadorSubasta() {
+          const ahora = new Date();
+          const diferencia = fechaSubasta - ahora;
+
+          const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+          const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+
+          document.getElementById('subasta-dias').textContent = dias.toString().padStart(2, '0');
+          document.getElementById('subasta-horas').textContent = horas.toString().padStart(2, '0');
+          document.getElementById('subasta-minutos').textContent = minutos.toString().padStart(2, '0');
+        }
+
+        actualizarContadorSubasta();
+        setInterval(actualizarContadorSubasta, 60000); // Actualizar cada minuto
+      }
+
+      document.addEventListener('DOMContentLoaded', iniciarContadorSubasta);
     </script>
   </main>
 
   <footer>
     <p>&copy; 2025 Rentify. Todos los derechos reservados.</p>
   </footer>
-
+  
 </body>
 </html>
-
-
-
-
