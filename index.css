@@ -1,4 +1,11 @@
-* ESTILOS GENERALES */
+/* ESTILOS GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,8 +14,7 @@ body {
 }
 
 main {
-  margin:0;
-  padding: 0;
+  padding: 2rem;
 }
 
 /* HEADER Y LOGO */
@@ -24,9 +30,7 @@ main {
   height: 100px;
   padding: 0 20px;
   top: 0;
-  width:auto;
-  margin: 0;
-  
+  width: auto
 }
 
 .logo-container {
@@ -141,7 +145,7 @@ nav {
 
 .Eslogan {
   font-size: 30px;
-  margin: 0.5rem 0 0 0; /* ← quita el margen inferior */
+  margin-top: 0.5rem;
   text-align: center;
   font-family: 'Georgia', 'Times New Roman', serif;
   font-style: italic;
@@ -159,6 +163,7 @@ html {
   margin: 2rem auto;
   max-width: 600px;
   padding: 0 20px;
+  margin-top: 10px;
 }
 
 /* ESTILOS DEL INPUT DE BÚSQUEDA */
@@ -192,21 +197,7 @@ html {
   background: linear-gradient(to right, #4a0390, #2509a8);
   transform: scale(1.05);
 }
-/* VERSIÓN COMPACTA PARA HEADER */
-.search-container.compact {
-  margin: 0;
-  max-width: 300px;
-}
 
-.search-container.compact .search-input {
-  padding: 8px 15px;
-  font-size: 14px;
-}
-
-.search-container.compact .search-button {
-  padding: 8px 15px;
-  font-size: 14px;
-}
 
 /* VERSIÓN MÓVIL */
 @media (max-width: 768px) {
@@ -229,7 +220,7 @@ html {
   position: relative;
   width: 90%;
   max-width: 900px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra para destacar */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6); /* Sombra para destacar */
   height: 600px;;
   max-height: 600px;
   min-height: 400px;
@@ -343,7 +334,109 @@ html {
   font-weight: bold;
   font-size: 1.1rem;
 }
+/* Sección Ofertas Limitadas */
+.contador-regresivo {
+  text-align: center;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3);
+}
 
+.contador-regresivo h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.5rem;
+}
+
+.tiempo {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.unidad {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 70px;
+}
+
+.unidad span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.unidad small {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.oferta-especial {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.producto-card.oferta {
+  position: relative;
+  max-width: 400px;
+  border: 3px solid #ff6b6b;
+  transform: scale(1.05);
+}
+
+.etiqueta-oferta {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff6b6b;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+.precios {
+  margin: 10px 0;
+}
+
+.precio-antiguo {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.precio-nuevo {
+  color: #ff6b6b;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.reservar-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.reservar-btn:hover {
+  background: #ee5a24;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(238, 90, 36, 0.4);
+}
 /* Responsive */
 @media (max-width: 900px) {
   .grid-productos {
@@ -456,9 +549,129 @@ html {
   aspect-ratio: 1/1;
 }
 
+/* Estilos para la sección de subasta */
+.subasta-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.subasta-info h3 {
+  color: #e9630a;
+  font-size: 1.8rem;
+}
+
+.proximamente-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.contador-subasta {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contador-subasta h4 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.tiempo-subasta {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgba(255,255,255,0.2);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.experiencia-destacada {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.experiencia-destacada h4 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #ffd700;
+}
+
+.experiencia-destacada ul {
+  text-align: left;
+  margin: 15px 0;
+}
+
+.experiencia-destacada li {
+  margin: 8px 0;
+}
+
+.info-subasta {
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.precio-base del {
+  color: #ff6b6b;
+}
+
+.puja-inicial {
+  font-size: 1.3rem;
+  color: #4ecdc4;
+}
+
+.ubicacion {
+  font-style: italic;
+}
+
+.notificarme-btn {
+  background: #ffd700;
+  color: #333;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.notificarme-btn:hover {
+  background: #ffed4a;
+  transform: translateY(-2px);
+}
+
+.beneficios-subasta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.beneficios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.beneficios span {
+  background: rgba(255,255,255,0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
 /* FOOTER */
 footer {
-  background-color: #333;
+  background-color: #2c3e50;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -470,7 +683,7 @@ footer {
   box-sizing: border-box;
   z-index: 100;
 }
-
+ 
 /* RESPONSIVE */
 @media (max-width: 700px) {
   .galeria-fotos {
@@ -540,20 +753,21 @@ footer {
   .galeria-fotos {
     grid-template-columns: 1fr;
   }
+   .Eslogan {
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 400px) {
   .carrusel-fotos img {
     height: 250px;
   }
-  
+  .Eslogan {
+    font-size: 20px;
+  }
   .carrusel-fotos button {
     width: 30px;
     height: 30px;
     font-size: 1em;
   }
 }
-
-
-
-
